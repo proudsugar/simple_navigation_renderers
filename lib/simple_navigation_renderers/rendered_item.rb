@@ -103,7 +103,7 @@ module SimpleNavigationRenderers
       end
 
       def simple_link
-        link_options[:method] ||= item.method
+        link_options[:method] ||= item.method if item.method
         link_to(item.name, (item.url || "#"), link_options)
       end
 
